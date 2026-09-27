@@ -1,0 +1,312 @@
+/* Global Reset & Pure White Background */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+  color: #2b2b2b;
+}
+
+/* Fixes the "square limited" width issue */
+#root {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+/* Explicitly set heading colors so they are visible */
+h1 {
+  color: #2b2b2b;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 16px 36px;
+  background-color: #2b2b2b; 
+  border-bottom: 3px solid #d4af37; 
+}
+
+.navbar h2 {
+  margin: 0;
+  color: #d4af37; 
+  white-space: nowrap;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.navbar-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 16px 28px;
+}
+
+.navbar-links a {
+  color: #fdfbf7;
+  text-decoration: none;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: color 0.2s;
+}
+
+.navbar-links a:hover {
+  color: #d4af37;
+}
+
+.matches-page, .home-page {
+  padding: 0 32px 40px;
+}
+
+.matches-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.match-card {
+  background-color: white;
+  width: auto;
+  padding: 30px;
+  text-align: left;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e8e8e8;
+  transition: transform 0.2s;
+}
+
+.match-card:hover {
+  transform: translateY(-5px);
+}
+
+.match-card h2 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 24px;
+  color: #2b2b2b;
+}
+
+.match-card button,
+.booking-form button,
+.history-button {
+  padding: 12px 24px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  background-color: #8c2727; 
+  color: white;
+  transition: background-color 0.2s;
+}
+
+.match-card button:hover,
+.booking-form button:hover,
+.history-button:hover {
+  background-color: #631b1b;
+}
+
+.booking-form button {
+  margin-top: 16px;
+}
+
+.booking-page {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 32px 40px;
+}
+
+.booking-form,
+.booking-details {
+  padding: 32px;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e8e8e8;
+}
+
+.booking-form {
+  display: grid;
+  gap: 12px;
+  text-align: left;
+}
+
+.booking-form label {
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #4a4a4a;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.booking-details {
+  margin-top: 32px;
+  text-align: left;
+  background-color: #faf9f5;
+}
+
+.booking-details h3 {
+  margin-top: 0;
+  color: #2b2b2b;
+  border-bottom: 2px solid #eaddba;
+  padding-bottom: 10px;
+}
+
+.booking-details p+p {
+  margin-top: 12px;
+}
+
+.booking-form input,
+.booking-form select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px;
+  border: 1px solid #dcd7cb;
+  border-radius: 8px;
+  font: inherit;
+  background-color: #ffffff;
+}
+
+.booking-form select {
+  cursor: pointer;
+}
+
+.booking-form input:focus,
+.booking-form select:focus {
+  outline: none;
+  border-color: #d4af37;
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+}
+
+.history-page {
+  padding: 0 32px 40px;
+}
+
+.history-button {
+  margin-bottom: 32px;
+}
+
+.history-table-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  overflow-x: auto;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e8e8e8;
+}
+
+.history-table {
+  width: 100%;
+  min-width: 600px;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.history-table th,
+.history-table td {
+  padding: 18px 24px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.history-table th {
+  background-color: #faf9f5;
+  color: #4a4a4a;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+}
+
+.history-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.history-table tbody tr:hover {
+  background-color: #fffaf0;
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px;
+  }
+  .navbar h2 {
+    font-size: 24px;
+  }
+  .navbar-links {
+    justify-content: flex-start;
+    gap: 12px 20px;
+  }
+  h1 {
+    font-size: 28px;
+  }
+  .matches-page, .booking-page, .history-page, .home-page {
+    padding-inline: 20px;
+  }
+  .matches-grid {
+    grid-template-columns: 1fr;
+  }
+  .booking-form,
+  .booking-details {
+    padding: 24px;
+  }
+  .history-table th,
+  .history-table td {
+    padding: 14px 16px;
+  }
+  .history-table-wrapper {
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+    overflow: visible;
+  }
+  .history-table,
+  .history-table thead,
+  .history-table tbody,
+  .history-table tr,
+  .history-table td {
+    display: block;
+  }
+  .history-table {
+    min-width: 0;
+  }
+  .history-table thead {
+    display: none;
+  }
+  .history-table tr {
+    margin-bottom: 20px;
+    padding: 12px 0;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e8e8e8;
+  }
+  .history-table td {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    border-bottom: 1px solid #e8e8e8;
+    text-align: right;
+  }
+  .history-table td::before {
+    color: #8c2727;
+    font-weight: 600;
+    text-align: left;
+  }
+  .history-table td:nth-child(1)::before { content: "Name"; }
+  .history-table td:nth-child(2)::before { content: "Guests"; }
+  .history-table td:nth-child(3)::before { content: "Seating"; }
+  .history-table td:nth-child(4)::before { content: "Branch"; }
+  .history-table td:last-child { border-bottom: 0; }
+}
